@@ -1,0 +1,23 @@
+{
+  "name": "seddit",
+  "version": "1.0.0",
+  "description": "Seddit: The Back Page of the Internet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n1ckDotEXE/Seddit.git"
+  },
+  "author": "Nicholas Nam, Chris Song, and Parker Jackson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n1ckDotEXE/Seddit/issues"
+  },
+  "homepage": "https://github.com/n1ckDotEXE/Seddit#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "foundation-sites": "^6.6.3"
+  }
+}
