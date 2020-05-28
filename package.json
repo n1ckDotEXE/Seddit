@@ -18,6 +18,7 @@
   "homepage": "https://github.com/n1ckDotEXE/Seddit#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "foundation-sites": "^6.6.3"
+    "foundation-sites": "^6.6.3",
+    "pg-promise": "^10.5.6"
   }
 }
