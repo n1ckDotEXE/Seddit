@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const db = require('./models');
+const db = require('../models');
 
 // retrieve list of all users
 router.get('/', (req, res) => {

@@ -11,13 +11,21 @@ const postRouter = require('./routes/posts');
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-app.use(bodyParser.json);
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
 
+
+app.get("/home",(req,res)=> { 
+  res.render("index.ejs")
+})
+
+
 app.use('/users', userRouter);
 app.use('/subseddits', subsedditRouter);
-app.use('/posts', postRouter);
+app.use('/posts', postRouter); 
+
+
 
 app.listen(PORT, () => {
   console.log(`Listening: http://localhost:${PORT}`)
@@ -25,7 +33,3 @@ app.listen(PORT, () => {
 
 module.exports = app;
 
-
-  app.get("/",(req,res)=> { 
-    res.render("index")
-  })
