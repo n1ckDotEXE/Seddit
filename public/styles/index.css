@@ -81,7 +81,11 @@ body{
 } 
 .trending-column{ 
     width: 15vw;
-}
+   overflow:scroll;
+
+} 
+
+
 .vertical-text{ 
     writing-mode: vertical-lr;
     transform: rotate(180deg)
