@@ -9,8 +9,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Users.associate = function(models) { 
 
-    Users.hasMany(models.Posts, {foreignKey: 'id'})
-	  Users.hasMany(models.Comments, {foreignKey: 'id'})
+    Users.hasMany(models.Posts, {foreignKey: 'author_id'})
+	  Users.hasMany(models.Comments, {foreignKey: 'author_id'})
 
   };
   return Users;

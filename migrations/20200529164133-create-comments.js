@@ -8,9 +8,6 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      comment_username: {
-        type: Sequelize.STRING
-      },
       comment_text: {
         type: Sequelize.STRING
       },
@@ -21,7 +18,16 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      post_id: { 
+        allowNull:false, 
+        type: Sequelize.INTEGER
+      },  
+      author_id: { 
+        allowNull:false, 
+        type: Sequelize.INTEGER
       }
+
     });
   },
   down: (queryInterface, Sequelize) => {
