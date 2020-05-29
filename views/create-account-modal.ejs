@@ -1,19 +1,29 @@
 <div id="create-modal-form" class="modal">  
             
     <form class="shadow modal-content">  
+
         <span class="close">&times;</span>
-        <div> Create Your Account </div>
-        <label for="first_name"> First Name:</label> 
-            <input class="input_bar" type="text" name="first_name" >
-        <label for="last_name"> Username: </label> 
-            <input class="input_bar" type="text" for="last_name">
+        <div> Create Your Account </div> 
+
+        <label for="first_name_input"> First Name:</label> 
+            <input class="input_bar" type="text" name="first_name_input" > 
+
+        <label for="username_input"> Username: </label> 
+            <input class="input_bar" type="text" name="username_input"> 
+
         <label for="email_input"> Email: </label> 
-            <input class="input_bar" type="email" for="email_input">
+            <input class="input_bar" type="email" name="email_input">  
+
+        <label for="password_input"> Password:</label> 
+            <input class="input_bar" type="text" name="password_input">
+
         <div> Age Group</div>  
             <label> Over 18?</label>
                  <input type="radio" name="over_under_18_input" value=0> 
+
             <label> Under 18?</label>  
-                <input type="radio" name="over_under_18_input" value=1>
+                <input type="radio" name="over_under_18_input" value=1> 
+
             <button class="submit-button" type="submit">submit</button>
          
     
