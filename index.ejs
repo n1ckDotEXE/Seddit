@@ -3,24 +3,27 @@
 <head> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
-    <link href="styles/index.css" rel="stylesheet" type="text/css">
+    <link href="styles/index.css" rel="stylesheet" type="text/css">  
+    <link href="styles/create-modal.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="images/seddit-logo.png"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>seddit: The backpage of the internet</title> 
+    <title> seddit: The backpage of the internet</title> 
+   
 </head>
 <body> 
 
-    <head>   
-        <ul class="menu">
-            <li class="menu-text"> <span id="main-logo"> seddit </span> </li>
-            <li class="nav-links"><a href="./views/sign_up_form.ejs">Create an Account</a></li>
+    <header>   
+        <ul class="shadow menu">
+            <li class="menu-text"> <img class="logo-pic" src="images/seddit-logo.png"> <span id="main-logo"> seddit </span> </li>
+            <li class="nav-links"><a href="#">Create an Account</a></li>
             <li class="nav-links" ><a href="#">Login</a></li>
             <li class="nav-links" ><a href="#">My Feed</a></li>
           </ul>
 
-          
+          <%- include('views/create-account-modal.ejs')  %> 
 
-            <form class="search-area"> 
+            <form class="shadow search-area"> 
                 <input class="search-text-area" type="text" name="search-input"> 
                 <button class="search-button" type="submit"> search</button>
             </form>
@@ -29,13 +32,13 @@
           
       
 
-    </head> 
+    </header> 
 
     <main>  
 
         <div class="container">  
 
-            <div class="flex-row trending-section">  
+            <div class="shadow flex-row trending-section">  
                 <div class=" trending-header vertical-text "> Trending... </div> 
 
                 <div class="trending-column">   
@@ -45,8 +48,10 @@
 
          
 
-            <div class="main-board">   
+            <div class="shadow main-board">   
+                    <div class="post-preview"> 
 
+                    </div>
             </div>  
 
         </div>
@@ -60,5 +65,6 @@
     </footer>
     
 </body> 
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script> 
+<script src="scripts/index.js"></script>
 </html>

@@ -10,7 +10,12 @@ body{
 
     background-color:#7DCD85; ;
     align-items: center;
+    margin: 20px;
 
+} 
+.logo-pic{ 
+    widows: 100px; ; 
+    height:100px ;
 }
 #main-logo{ 
     font-size: 80px;
@@ -27,7 +32,7 @@ body{
     justify-content: space-around; 
     justify-items:center ;
     align-items: center; 
-    margin: 10px ;
+    margin: 20px ;
 } 
 
 .search-text-area{ 
@@ -51,13 +56,13 @@ body{
     background-color:#FF495C;  
     width: 80vw; 
     height: 70vh; 
-    margin: 10px;
+    margin: 20px;
 } 
 .trending-section{ 
     background-color:#256EFF; 
     width: 20vw; 
     height: 70vh; 
-    margin: 10px;
+    margin: 20px;
 
 }  
 .flex-row{ 
@@ -77,7 +82,16 @@ body{
 .trending-column{ 
     width: 15vw;
 }
-.vertical-text{
-    width:1px;
-    word-wrap: break-word;
+.vertical-text{ 
+    writing-mode: vertical-lr;
+    transform: rotate(180deg)
+  
 } 
+
+.shadow {
+    -webkit-box-shadow: 3px 3px 5px 6px #000;  
+    -moz-box-shadow: 3px 3px 5px 6px #000;  
+    box-shadow: 3px 3px 5px 6px #000;  
+  } 
+
+ 
