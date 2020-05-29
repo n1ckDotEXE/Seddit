@@ -11,8 +11,8 @@ module.exports = {
       post_title: {
         type: Sequelize.STRING
       },
-      post_author: {
-        type: Sequelize.STRING
+      author_id: {
+        type: Sequelize.INTEGER
       },
       post_rightvotes: {
         type: Sequelize.INTEGER
