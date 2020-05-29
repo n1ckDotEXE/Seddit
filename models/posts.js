@@ -8,8 +8,11 @@ module.exports = (sequelize, DataTypes) => {
     post_comments: DataTypes.STRING,
     posts_numberOfComments: DataTypes.INTEGER
   }, {});
-  Posts.associate = function(models) {
-    // associations can be defined here
+  Posts.associate = function(models) { 
+    Posts.hasMany(models.Comments, {foreignKey:'id'} )
+    Posts.belongsTo(models.Users,{foreignKey:'id'})
+
+    
   };
   return Posts;
 };
