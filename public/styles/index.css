@@ -56,7 +56,10 @@ body{
     background-color:#FF495C;  
     width: 80vw; 
     height: 70vh; 
-    margin: 20px;
+    margin: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
 } 
 .trending-section{ 
     background-color:#256EFF; 
@@ -98,4 +101,10 @@ body{
     box-shadow: 3px 3px 5px 6px #000;  
   } 
 
- 
+ .post-preview{ 
+    width: 60vw ;
+    height: 20vh; 
+    background-color: silver; 
+    margin-top: 10px;
+
+ }
