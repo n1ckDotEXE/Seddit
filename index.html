@@ -1,27 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+    <link href="styles/index.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seddit</title>
+    <title>seddit: The backpage of the internet</title> 
 </head>
 <body> 
 
-    <head>  
-        <h1> Sedd-it</h1> 
-        <h2> <a href="./views/sign_up_form.ejs"> Create an Account </a> </h2>
-        <h2> <a href="#"> Login </a> </h2>  
-        <label for="search_input"> Search</label>
-        <input type="text"> 
+    <head>   
+        <ul class="menu">
+            <li class="menu-text"> <span id="main-logo"> seddit </span> </li>
+            <li class="nav-links"><a href="./views/sign_up_form.ejs">Create an Account</a></li>
+            <li class="nav-links" ><a href="#">Login</a></li>
+            <li class="nav-links" ><a href="#">My Feed</a></li>
+          </ul>
+
+          
+
+            <form class="search-area"> 
+                <input class="search-text-area" type="text" name="search-input"> 
+                <button class="search-button" type="submit"> search</button>
+            </form>
+          
+
+          
+      
 
     </head> 
 
     <main>  
 
-        <div>  
-            
+        <div class="container">  
+
+            <div class="flex-row trending-section">  
+                <div class=" trending-header vertical-text "> Trending... </div> 
+
+                <div class="trending-column">   
+    
+                </div>
+            </div>
+
+         
+
+            <div class="main-board">   
+
+            </div>  
 
         </div>
+        
 
 
     </main> 
@@ -30,5 +59,6 @@
 
     </footer>
     
-</body>
+</body> 
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 </html>
