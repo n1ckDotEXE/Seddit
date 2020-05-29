@@ -10,7 +10,40 @@ module.exports = {
         age_group: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
-      }], {});
+      },
+       { 
+         first_name:  "Parker",
+        user_name: "Spiderman321",
+        email:  "parker@dontexist.com",
+        password: "7768", 
+        age_group: 0,
+        createdAt: new Date(),
+        updatedAt: new Date() 
+      },
+        
+        { 
+        first_name:  "Chris",
+        user_name: "ChrispyKreme",
+        email:  "chris@dontexist.com",
+        password:  "7769",
+        age_group: 0,
+        createdAt: new Date(),
+        updatedAt: new Date()  
+       }, 
+        
+        { 
+        first_name: "Nick",
+        user_name: "$aint_nick",
+        email: "nick@dontexist.com",
+        password:  "7770",
+        age_group: 0,
+        createdAt: new Date(),
+        updatedAt: new Date() 
+       }
+        
+    
+    
+    ], {});
   },
 
   down: (queryInterface, Sequelize) => {
