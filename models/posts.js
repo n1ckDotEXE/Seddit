@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     post_comments: DataTypes.STRING,
     posts_numberOfComments: DataTypes.INTEGER ,
     author_id:DataTypes.INTEGER ,
-    comment_id:DataTypes.INTEGER
+    
   }, {});
   Posts.associate = function(models) { 
     Posts.hasMany(models.Comments, {foreignKey:'comment_id'} )
