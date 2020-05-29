@@ -23,4 +23,8 @@ loginModalLink.onclick = function(){
 
 loginspan.onclick = function(){ 
     loginModalForm.style.display = "none"
-}
+} 
+
+
+
+
