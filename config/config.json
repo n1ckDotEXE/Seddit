@@ -1,5 +1,14 @@
 {
   "development": {
+<<<<<<< HEAD
+    "username": "postgres",
+    "password": "postgress",
+    "database": "seddit_db",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
+=======
       "username": "lskihwmy_chris",
       "password": "digitalcraftsatl",
       "database": "Seddit",
@@ -10,3 +19,4 @@
       "use_env_variable": "DATABASE_URL"
   }
 }
+>>>>>>> master
