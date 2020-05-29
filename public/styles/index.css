@@ -1,0 +1,110 @@
+body{ 
+    font-family: "Francois One"; 
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #0bab64 74%); 
+    letter-spacing: 3px;
+}  
+
+
+.menu{  
+
+    background-color:#7DCD85; ;
+    align-items: center;
+    margin: 20px;
+
+} 
+.logo-pic{ 
+    widows: 100px; ; 
+    height:100px ;
+}
+#main-logo{ 
+    font-size: 80px;
+    letter-spacing: 5px;
+} 
+.nav-links{ 
+    font-size: 35px;
+}  
+.search-area{ 
+    background-color: #FCFCFC; 
+    height: 120px;
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around; 
+    justify-items:center ;
+    align-items: center; 
+    margin: 20px ;
+} 
+
+.search-text-area{ 
+    width: 50vw;
+} 
+
+.search-button { 
+    font-size: 25px;
+    width: 200px;   
+    height: 50px; 
+    border-radius: 3px;
+    margin: 0px;
+    background-color: silver;
+}
+.container{ 
+    display: flex; 
+    flex-direction: row; 
+    justify-content: center;
+}
+.main-board{ 
+    background-color:#FF495C;  
+    width: 80vw; 
+    height: 70vh; 
+    margin: 20px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+} 
+.trending-section{ 
+    background-color:#256EFF; 
+    width: 20vw; 
+    height: 70vh; 
+    margin: 20px;
+
+}  
+.flex-row{ 
+    display: flex; 
+    flex-direction: row;
+}
+
+.trending-item{ 
+
+} 
+
+.trending-header{ 
+    text-align: center;
+    width: 5vw;
+    font-size: 40px;
+} 
+.trending-column{ 
+    width: 15vw;
+   overflow:scroll;
+
+} 
+
+
+.vertical-text{ 
+    writing-mode: vertical-lr;
+    transform: rotate(180deg)
+  
+} 
+
+.shadow {
+    -webkit-box-shadow: 3px 3px 5px 6px #000;  
+    -moz-box-shadow: 3px 3px 5px 6px #000;  
+    box-shadow: 3px 3px 5px 6px #000;  
+  } 
+
+ .post-preview{ 
+    width: 60vw ;
+    height: 20vh; 
+    background-color: silver; 
+    margin-top: 10px;
+
+ }

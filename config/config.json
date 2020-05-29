@@ -1,0 +1,12 @@
+{
+  "development": {
+      "username": "lskihwmy_chris",
+      "password": "digitalcraftsatl",
+      "database": "Seddit",
+      "host": "162.241.24.185",
+      "dialect": "postgres"
+  },
+  "production": {
+      "use_env_variable": "DATABASE_URL"
+  }
+}
