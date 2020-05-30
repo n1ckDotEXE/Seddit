@@ -17,7 +17,10 @@ app.use(express.static('public'));
 
 
 app.get("/home",(req,res)=> { 
-  res.render("index.ejs")
+  res.render("index", { 
+    display:"false",
+    notshown:"notshown"
+  })
 })
 
 

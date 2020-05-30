@@ -1,6 +1,10 @@
-<div id="create-modal-form" class="modal">  
+<div id="create-modal-form"  class="modal <% if (display === "true") { %>
+    shown
+    <%} else { %>
+    notshown
+    <% } %>">  
             
-    <form class="shadow modal-content">  
+    <form action="/users" method="POST" class="shadow modal-content">  
 
         <span class="close">&times;</span>
         <div> Create Your Account </div> 

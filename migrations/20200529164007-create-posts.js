@@ -20,7 +20,7 @@ module.exports = {
       post_leftvotes: {
         type: Sequelize.INTEGER
       },
-      post_comments: {
+      post_data: {
         type: Sequelize.STRING
       },
       posts_numberOfComments: {
