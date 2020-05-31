@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     post_title: DataTypes.STRING,
     post_rightvotes: DataTypes.INTEGER,
     post_leftvotes: DataTypes.INTEGER,
-    post_comments: DataTypes.STRING,
+    post_data: DataTypes.STRING,
     posts_numberOfComments: DataTypes.INTEGER ,
     author_id:DataTypes.INTEGER ,
     
