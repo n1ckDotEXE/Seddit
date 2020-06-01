@@ -3,6 +3,15 @@ const router = express.Router();
 const db = require('../models'); 
 const bcrypt = require('bcrypt');
 
+<<<<<<< HEAD
+=======
+router.get('/create-account', (req, res) => {
+
+      res.render('index.ejs', { 
+        display:"true", 
+        shown:"shown",
+      });
+>>>>>>> 57b76f3ea5a9647095760a5fdc3e724087fd4d7c
 router.use(express.static('./public'));
 
 router.get('/create-account', (req, res) => {
@@ -26,31 +35,36 @@ router.post('/create-account', (req,res,) =>{
       email:email,
       password: hash, 
       age_group: age_group,
-    }).then((result) => { 
+    }).then((user) => { 
+      req.session.user = user;
       res.redirect('../home');
     }); 
   });
 });
  
-router.post("/login", (req,res) => { 
-  const{ username, password} = req.body; 
-  db.Users.findOne({ where: {username} }) 
-    .then((Users) => { 
+router.post('/login', (req,res) => { 
+  const { user_name, password } = req.body;
+
+  db.Users.findOne({ where: { user_name } }) 
+    .then((Users) => {
       bcrypt.compare(password, Users.password, (err, match) => { 
-        if (match){ 
-          req.session.user = User; 
-          res.redirect('../home')
-        } else{ 
+        if (match) { 
+          req.session.user = Users; 
+          res.redirect('../home');
+        } else { 
           res.send('Incorrect Password');
         }
-      }) 
-        .catch(()=> {
-          res.send('username not found');
-        });
+      });
+    })
+    .catch(() => {
+      res.send('username not found');
     });
 });
 
-
+router.get('/logout', (req, res) => {
+  req.session.destroy();
+  res.redirect('/home');
+})
 
 // // retrieve a user info (username, password, email, karma, subscriptions, posts, comments)
 // router.get('/:user_id', (req, res) => {

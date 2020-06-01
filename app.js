@@ -1,6 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser'); 
 const db = require('./models'); 
+const bodyParser = require('body-parser');
+const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 const session = require('express-session'); 
@@ -32,8 +35,29 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'));
+app.use(cookieParser());
+app.use(
+  session({
+    secret: 'secret',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      maxAge: 600000,
+    },
+  })
+);
 
 app.get
+
+function checkAuthentication(req, res, next) {
+  if (req.session.user) {
+    next();
+  } else {
+    res.send('you are not logged in')
+    // res.redirect('/users');
+  }
+}
+
 
 app.get("/home",(req,res)=> { 
   
@@ -60,16 +84,18 @@ app.get('/blue', (req,res)=> {
   console.log("blue")
 })
 
+});
 
 app.use('/users', userRouter);
 app.use('/subseddits', subsedditRouter);
 app.use('/posts', postRouter); 
 
-
+app.get('/dashboard', checkAuthentication, (req, res) => {
+  res.send('This is the Dashboard');
+});
 
 app.listen(PORT, () => {
   console.log(`Listening: http://localhost:${PORT}`)
 });
 
-module.exports = app; 
-
+module.exports = app;
