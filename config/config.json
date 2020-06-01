@@ -1,9 +1,12 @@
-{"development": 
-    {
+{
+    "development": {
         "username": "postgres",
-        "password": null,
-        "database": "seddit_db", 
-        "host": "127.0.0.1", 
-        "dialect": "postgres" 
-        } 
+        "password": "postgress",
+        "database": "seddit_db",
+        "host": "127.0.0.1",
+        "dialect": "postgres"
+    },
+    "production": {
+        "use_env_variable": "DATABASE_URL"
     }
+}
