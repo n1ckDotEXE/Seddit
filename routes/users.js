@@ -3,15 +3,6 @@ const router = express.Router();
 const db = require('../models'); 
 const bcrypt = require('bcrypt');
 
-<<<<<<< HEAD
-=======
-router.get('/create-account', (req, res) => {
-
-      res.render('index.ejs', { 
-        display:"true", 
-        shown:"shown",
-      });
->>>>>>> 57b76f3ea5a9647095760a5fdc3e724087fd4d7c
 router.use(express.static('./public'));
 
 router.get('/create-account', (req, res) => {
