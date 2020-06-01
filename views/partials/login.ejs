@@ -1,12 +1,12 @@
 <div id="login-modal-form" class="modal">  
             
-    <form class="shadow modal-content">  
+    <form class="shadow modal-content" action="/users/login" method="POST">  
 
         <span class="close">&times;</span>
         <div> Log into your account </div> 
 
         <label for="username"> Username: </label> 
-            <input class="input_bar" type="text" name="username"> 
+            <input class="input_bar" type="text" name="user_name"> 
 
         <label for="password"> Password: </label> 
             <input class="input_bar" type="password" name="password"> 
