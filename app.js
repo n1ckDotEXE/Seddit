@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser'); 
+const db = require('./models'); 
 
 const app = express();
 const session = require('express-session'); 
@@ -35,10 +36,28 @@ app.use(express.static('public'));
 app.get
 
 app.get("/home",(req,res)=> { 
-  res.render("index", { 
-    display:"false",
-    notshown:"notshown"
+  
+  db.Posts.findAll().then(results => { 
+    let posts = results.map(result => {  
+      console.log(result)
+      let title = result.post_title;
+      let content = result.post_data;
+      return {title,content}
+      
+    } )
+    res.render("index", { 
+      display:"false",
+      notshown:"notshown" , 
+      posts:posts
+    })
+
   })
+
+}) 
+
+app.get('/blue', (req,res)=> { 
+
+  console.log("blue")
 })
 
 
@@ -52,5 +71,5 @@ app.listen(PORT, () => {
   console.log(`Listening: http://localhost:${PORT}`)
 });
 
-module.exports = app;
+module.exports = app; 
 

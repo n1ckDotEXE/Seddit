@@ -12,14 +12,20 @@ const db = require('../models');
 //         hidden:"hidden"
 //       });
 //     });
-// });
+// }); 
+
+
+
+
+
+
 router.use(express.static('./public'));
 
 router.get('/create-account', (req, res) => {
 
       res.render('index.ejs', { 
         display:"true", 
-        shown:"shown"
+        shown:"shown",
       });
     }); 
 

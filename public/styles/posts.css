@@ -1,0 +1,29 @@
+.addpost{ 
+   display: flex; 
+   flex-direction: row; 
+   justify-content: right;
+}
+
+
+.post-preview{ 
+    display: flex;  
+   
+    flex-direction: column; 
+    justify-content: space-around;
+    width: 60vw ;
+    height: 20vh; 
+    background-color: #FCFCFC; 
+    margin-top: 10px; 
+    text-align: center; 
+
+
+ }
+.postTitle{  
+    font-weight:bold;
+    font-size: 24px;
+
+} 
+
+.content{ 
+    margin: 0 50px 0 50px;
+}

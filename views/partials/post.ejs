@@ -1,0 +1,22 @@
+
+
+
+
+<div class="shadow post-preview">
+
+  <%   <%=posts%>.forEach((<%=post%>) => { %> 
+  
+    
+          <h3> <%= post['post_title']%> </h3> 
+          <div> <%= post['author_id']%></div> 
+          <div> <%=post['createdAt']%></div>  
+          <div> 
+              <div> <%=post['posts_leftvotes']%></div> 
+              <div> <%=post['posts_rightvotes']%> </div> 
+          </div> 
+      
+       
+        <% })%>
+  
+  </div>
+
