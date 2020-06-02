@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="shortcut icon" href="seddit-logo.png">  
+    <link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
+    <link href= "styles/index.css" rel="stylesheet" type="text/css">  
+    <link href="styles/create-modal.css" rel="stylesheet" type="text/css"> 
+    <link href="styles/posts.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> seddit: The backpage of the internet</title> 
+  
+</head>
+<body> 
+
+    <header>   
+        <ul class="shadow menu">
+            <li class="menu-text"> <img class="logo-pic" src="images/seddit-logo.png"> <span id="main-logo" > seddit </span> </li>
+            <li class="nav-links" ><a href="#">SignOut</a></li>
+            <li class="nav-links" ><a href="#">Home</a></li> 
+            <div class="flex-column-left"> 
+                <div class="nav-links">Welcome, <%= username %></div> 
+            <div class="profile_picture"> <img src="<%= profilePic %> " alt=""> </div>
+
+            </div>
+            
+          </ul>
+
+            <form class="shadow search-area"> 
+                <input class="search-text-area" type="text" name="search-input"> 
+                <button class="search-button" type="submit"> search</button>
+            </form>
+          
+
+          
+      
+
+    </header> 
+
+    <main>  
+
+        <div class="container">  
+
+            <div class="shadow flex-row trending-section">  
+                <div class=" trending-header vertical-text "> Trending... </div> 
+
+                <div class="trending-column">   
+                    <a class="twitter-timeline"
+                    href="https://twitter.com/enews"
+                   >
+                  Tweets by @TwitterDev
+                  </a>
+    
+                </div>
+            </div>
+
+            <div class="shadow main-board">    
+                <button class="my-add-button" type="button"> <img class="addpost" src="images/addButton.png" > </button>
+                  <%- include ('posts.ejs') %> 
+
+            </div>  
+
+        </div>
+        
+
+
+    </main> 
+
+    <footer> 
+
+    </footer>
+    
+</body>  
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script> 
+<script src="scripts/index.js"></script> 
+</html> 
