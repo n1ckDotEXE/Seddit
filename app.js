@@ -42,6 +42,7 @@ app.use(
 );
 
 function checkAuthentication(req, res, next) {
+  // console.log(req)
   if (req.session.user) {
     next();
   } else {
@@ -69,8 +70,11 @@ app.get("/home",(req,res)=> {
   db.Posts.findAll().then(results => { 
     let posts = results.map(result => {  
       let title = result.post_title;
-      let content = result.post_data;
-      return {title,content}     
+      let content = result.post_data; 
+      let id = result.id; 
+      let post_leftvotes = result.post_leftvotes; 
+      let post_rightvotes = results.post_rightvotes;
+      return {title,content,id,post_leftvotes,post_rightvotes}     
     })
     res.render("index", { 
       display:"false",

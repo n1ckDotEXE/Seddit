@@ -1,10 +1,14 @@
 
-<% posts.forEach(post => { %>
+<% posts.forEach((post) => { %>
     
     <div class="shadow post-preview"> 
         <button class="postTitle collapsible"> <%= post.title %>  </button> 
         <p class="content">  <%= post.content %> </p> 
-        <div class="flex-row"> <button> 0 <img class="like-button" src="images/left-arrow.png"> </button>  <button> <img class="like-button" src="images/right-arrow.png"> 0 </button>  </div>
+        <div class="flex-row"> 
+            <button id="<%= post.id %>" onClick="calculate()"> <span class="left-like" > </span> <%= post.post_leftvotes %>  <img class="like-button" src="images/left-arrow.png" > </button> 
+             
+            <button> <img class="like-button" src="images/right-arrow.png"> <%= post.post_rightvotes %> </button>  </div> 
+        <button type="submit"> submit</button>
         <button class="expand"> read full post</button>
     </div>
 <% }); %> 
