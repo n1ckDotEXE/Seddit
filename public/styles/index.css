@@ -50,12 +50,13 @@ body{
 .container{ 
     display: flex; 
     flex-direction: row; 
-    justify-content: center;
+    justify-content: center; 
+    height: 90vh;
 }
 .main-board{ 
     background-color:#FF495C;  
     width: 80vw; 
-    height: 70vh; 
+    height: 90vh; 
     margin: 20px; 
     display: flex; 
     flex-direction: column; 
@@ -66,7 +67,7 @@ body{
 .trending-section{ 
     background-color:#256EFF; 
     width: 20vw; 
-    height: 70vh; 
+    height: 90vh; 
     margin: 20px;
 
 }  
@@ -98,11 +99,11 @@ body{
 } 
 
 .shadow {
-    -webkit-box-shadow: 3px 3px 5px 6px #000;  
-    -moz-box-shadow: 3px 3px 5px 6px #000;  
-    box-shadow: 3px 3px 5px 6px #000;  
+    -webkit-box-shadow: 5px 5px 5px 6px #000;  
+    -moz-box-shadow: 5px 5px 5px 6px #000;  
+    box-shadow: 5px 5px 5px 6px #000;  
   } 
 
-.timeline-Widget{ 
-border-radius: 0 !important;
+body .timeline-Widget{ 
+border-radius: 0 ;
 }

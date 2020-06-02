@@ -1,13 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser'); 
 const db = require('./models'); 
-const bodyParser = require('body-parser');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
 const app = express();
-const session = require('express-session'); 
-const cookieParser = require('cookie-parser')
+
 
 
 const PORT = process.env.PORT || 3000;
@@ -84,7 +82,7 @@ app.get('/blue', (req,res)=> {
   console.log("blue")
 })
 
-});
+;
 
 app.use('/users', userRouter);
 app.use('/subseddits', subsedditRouter);
