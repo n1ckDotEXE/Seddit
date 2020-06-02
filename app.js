@@ -50,6 +50,21 @@ function checkAuthentication(req, res, next) {
   }
 }
 
+app.get("/",(req,res)=> {  
+  db.Posts.findAll().then(results => { 
+    let posts = results.map(result => {  
+      let title = result.post_title;
+      let content = result.post_data;
+      return {title,content}     
+    })
+    res.render("index", { 
+      display:"false",
+      notshown:"notshown", 
+      posts:posts
+    })
+  })
+}) 
+
 app.get("/home",(req,res)=> {  
   db.Posts.findAll().then(results => { 
     let posts = results.map(result => {  
