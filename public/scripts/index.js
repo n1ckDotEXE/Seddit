@@ -80,21 +80,53 @@ for (i = 0; i < coll.length; i++) {
     mainBoard.appendChild(newInputCard)
 
   }) 
+  const leftlikeButtons = document.getElementsByClassName("left-like")
+  console.log(leftlikeButtons.length)
 
-  var posty = document.getElementsByClassName("post-preview");
-  let expandButton = document.getElementsByClassName("expand")
+function calculate(){ 
+  for (y=0; y<leftlikeButtons.length; y++){ 
+    let button = document.getElementsByClassName('left-like')[y]
+    console.log(button)
+    var i = 0;
+    button.innerHTML = `${i}`;
+     i++;
+  }
+}
+
+ 
+
+  
 
 
+
+
+//     function leftIncrement(e){ 
+//       let id = e.target.id 
+//       console.log(id)
+//       axios.post(`/posts/increment/${id}`)
+//     }
+
+
+//   var posty = document.getElementsByClassName("post-preview");
+//   let expandButtons = document.getElementsByClassName("expand")
+
+// expandButtons.forEach(expandButton => {
+  
+//   expandButton.addEventListener("click", function() {
+//     mainBoard.innerHTML =""; 
+//     const card = document.createElement(div)
+//     card.style.backgroundColor = "white"; 
+//     card.style.width = "70vw" 
+//     card.stlye.height = 
+//     "80vh"
+//     posty[i].innerHTML= posty[i].data  
+//     mainBoard.appendChild(card)
+
+// });
+
+
+
+
+// });
     
-      expandButton.addEventListener("click", function() {
-          mainBoard.innerHTML =""; 
-          const card = document.createElement(div)
-          card.style.backgroundColor = "white"; 
-          card.style.width = "70vw" 
-          card.stlye.height = 
-          "80vh"
-          posty[i].innerHTML= posty[i].data  
-          mainBoard.appendChild(card)
-
-      });
-
+     
