@@ -1,4 +1,17 @@
 <p align="center">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/n1ckdotexe/seddit">
+<img alt="Website" src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fseddit-online.herokuapp.com%2Fhome">
+<img alt="npm" src="https://img.shields.io/npm/v/npm">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/n1ckdotexe/seddit">
+<img alt="GitHub" src="https://img.shields.io/github/license/n1ckDotEXE/Seddit">
+</p>
+ 
+<p align = "right">
+<img alt="Twitter URL" src="https://img.shields.io/twitter/url?style=social&url=http%3A%2F%2Fseddit-online.heroku.com">
+<img alt="GitHub watchers" src="https://img.shields.io/github/watchers/n1ckdotexe/seddit?style=social">
+</p>
+
+<p align="center">
 <a href="seddit-online.herokuapp.com"><img src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/logo-200x200.png?raw=true"></a>
 </p>
 <p align="center"><b>The Back Page of the Internet</b></p>
@@ -7,9 +20,9 @@
 
 ## Meet The Creators:
 <p align="center">
-<a href="https://github.com/chris-bk-song"><img src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/cs.png?raw=true"></a>
-<a href="https://github.com/parkerjacks"><img src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/pj.png?raw=true"></a>
-<a href="https://github.com/n1ckDotEXE"><img src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/nn.png?raw=true"></a>
+<a href="https://github.com/chris-bk-song"><img width=10% height=10% src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/cs.png?raw=true"></a>
+<a href="https://github.com/parkerjacks"><img width=10% height=10% src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/pj.png?raw=true"></a>
+<a href="https://github.com/n1ckDotEXE"><img width=10% height=10% src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/nn.png?raw=true"></a>
 </p>
 
 ## Features List:
