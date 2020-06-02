@@ -8,7 +8,8 @@ body{
 
 .menu{  
 
-    background-color:#7DCD85; ;
+    background-color: #2876f9;
+    background-image: linear-gradient(315deg, #2876f9 0%, #6d17cb 74%);; 
     align-items: center;
     margin: 20px;
 
@@ -20,10 +21,22 @@ body{
 #main-logo{ 
     font-size: 80px;
     letter-spacing: 5px;
-} 
+}  
+
+
+
+
+
 .nav-links{ 
     font-size: 35px;
-}  
+}   
+a:link{ 
+    color: black;
+} 
+a:visited{
+    color: black;
+}
+
 .search-area{ 
     background-color: #FCFCFC; 
     height: 120px;
@@ -73,7 +86,8 @@ body{
 }  
 .flex-row{ 
     display: flex; 
-    flex-direction: row;
+    flex-direction: row; 
+   
 }
 
 .trending-item{ 

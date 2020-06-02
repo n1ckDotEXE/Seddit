@@ -53,7 +53,6 @@ function checkAuthentication(req, res, next) {
 app.get("/home",(req,res)=> {  
   db.Posts.findAll().then(results => { 
     let posts = results.map(result => {  
-      console.log(result)
       let title = result.post_title;
       let content = result.post_data;
       return {title,content}     
@@ -69,24 +68,23 @@ app.get("/home",(req,res)=> {
 app.get('/homeLoggedIn', (req, res) => {
   db.Posts.findAll().then(results => { 
     let posts = results.map(result => {  
-      console.log(result)
       let title = result.post_title;
       let content = result.post_data;
       return {title,content}     
     })
-    console.log(req.session.user);
+   
     res.render('index2', {
       username: req.session.user.first_name,
+      profilePic:`images/${req.session.user.profile_pic}.png`,
+
       display:'false', 
       notshown: 'notshown',
-      posts: posts
+      posts: posts 
     })
   })
 })
 
-app.get('/blue', (req,res)=> { 
-  console.log("blue")
-})
+
 
 app.use('/users', userRouter);
 app.use('/subseddits', subsedditRouter);

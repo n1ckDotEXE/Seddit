@@ -22,6 +22,9 @@ module.exports = {
       },
       age_group: {
         type: Sequelize.INTEGER
+      }, 
+      profile_pic:{ 
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
