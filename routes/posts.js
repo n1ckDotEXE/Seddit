@@ -13,14 +13,14 @@ router.get('/', (req, res) => {
 });
 
 module.exports = router; 
-
-// router.post('/posts', (req,res,) =>{ 
-//   const title = 
-//   const rightVotes = 
-//   const leftVotes = 
-//   const Data = 
-//   const numbOfComments = 
-//   const author =
+router.posts("/posts",checkAuthentication, (req,res))
+router.post('/posts', (req,res,) =>{ 
+  const title = req.body.
+  const rightVotes = 0
+  const leftVotes = 0
+  const Data = 
+  const numbOfComments = 0
+  const author =req.Users
 
   
 //     db.Posts.create({   

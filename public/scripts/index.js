@@ -79,4 +79,22 @@ for (i = 0; i < coll.length; i++) {
     ; 
     mainBoard.appendChild(newInputCard)
 
-  })
+  }) 
+
+  var posty = document.getElementsByClassName("post-preview");
+  let expandButton = document.getElementsByClassName("expand")
+
+
+    
+      expandButton.addEventListener("click", function() {
+          mainBoard.innerHTML =""; 
+          const card = document.createElement(div)
+          card.style.backgroundColor = "white"; 
+          card.style.width = "70vw" 
+          card.stlye.height = 
+          "80vh"
+          posty[i].innerHTML= posty[i].data  
+          mainBoard.appendChild(card)
+
+      });
+
