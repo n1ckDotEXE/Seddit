@@ -6,8 +6,9 @@
             
     <form id="form" action="/users/create-account" method="POST" class="shadow modal-content">  
 
-        <span class="close">&times;</span>
-        <div> Create Your Account </div> 
+        
+        
+        <div class="flex-row"> <div class="margin-right">Create Your Account </div>  <span class="close">&times;</span>  </div> 
 
         <label for="first_name_input"> First Name:</label> 
             <input class="input_bar" type="text" name="first_name_input" > 
@@ -19,7 +20,25 @@
             <input class="input_bar" type="email" name="email_input">  
 
         <label for="password_input"> Password:</label> 
-            <input class="input_bar" type="password" name="password_input">
+            <input class="input_bar" type="password" name="password_input">  
+
+        <div> Please Select a Profile Picture</div>  
+
+        <div class="flex-row">  
+
+        <label class= "profile_picture"> <img src="images/cow.png"> </label>
+            <input type="radio" name="profile_picture" value="cow">    
+
+       <label class= "profile_picture"> <img src="images/chicken.png">  </label>
+           <input type="radio" name="profile_picture" value="chicken">  
+
+       <label class= "profile_picture"> <img src="images/moose.png">  </label>
+           <input type="radio" name="profile_picture" value="moose">  
+           
+       <label class= "profile_picture"> <img src="images/alien.png">  </label>
+           <input type="radio" name="profile_picture" value="alien"> 
+        </div>
+      
 
         <div> Age Group</div>  
             <label> Over 18?</label>

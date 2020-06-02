@@ -17,6 +17,7 @@ router.post('/create-account', (req,res,) =>{
   const user_name = req.body.username_input;
   const email = req.body.email_input;
   const password = req.body.password_input;
+  const profilePic = req.body.profile_picture;
   const age_group = req.body.over_under_18_input;
 
   bcrypt.hash(password, 10, (err, hash) => {
@@ -24,7 +25,8 @@ router.post('/create-account', (req,res,) =>{
       first_name: first_name, 
       user_name: user_name,  
       email:email,
-      password: hash, 
+      password: hash,  
+      profile_pic:profilePic,
       age_group: age_group,
     }).then((user) => { 
       req.session.user = user;

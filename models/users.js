@@ -23,6 +23,10 @@ module.exports = (sequelize, DataTypes) => {
     age_group: {
       type: DataTypes.INTEGER, 
       allowNull:false
+    } ,
+    profile_pic:{ 
+      type: DataTypes.STRING, 
+      allowNull:false
     }
   }, {});
   Users.associate = function(models) { 

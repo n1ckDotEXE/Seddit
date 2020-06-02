@@ -16,10 +16,15 @@
 
     <header>   
         <ul class="shadow menu">
-            <li class="menu-text"> <img class="logo-pic" src="images/seddit-logo.png"> <span id="main-logo"> seddit </span> </li>
+            <li class="menu-text"> <img class="logo-pic" src="images/seddit-logo.png"> <span id="main-logo" > seddit </span> </li>
             <li class="nav-links" ><a href="#">SignOut</a></li>
-            <li class="nav-links" ><a href="#">My Profile</a></li>
-            <h1>Welcome, <%= username %></h1>
+            <li class="nav-links" ><a href="#">My Profile</a></li> 
+            <div class="flex-column-left"> 
+                <div class="nav-links">Welcome, <%= username %></div> 
+            <div class="profile_picture"> <img src="<%= profilePic %> " alt=""> </div>
+
+            </div>
+            
           </ul>
 
             <form class="shadow search-area"> 
@@ -51,7 +56,7 @@
             </div>
 
             <div class="shadow main-board">    
-                <div class="addpost"> <div> + </div> </div>
+                <button class="my-add-button" type="button"> <img class="addpost" src="images/addButton.png" > </button>
                   <%- include ('posts.ejs') %> 
 
             </div>  

@@ -44,4 +44,39 @@ for (i = 0; i < coll.length; i++) {
     } else {
       content.style.display = "block";
     }
-  });}
+  });} 
+
+  const mainBoard = document.getElementsByClassName("main-board")[0]
+  const myAddButton = document.getElementsByClassName("my-add-button")[0] 
+
+  myAddButton.addEventListener("click", () => {  
+    const newInputCard = document.createElement("div")
+    newInputCard.className = ("shadow post-preview") 
+
+    const inputTitle = document.createElement("div")
+     
+    inputTitle.innerHTML = "Topic Title:" 
+
+
+    const newTitle = document.createElement("input") 
+    newTitle.className = ("input_bar")  
+    newTitle.style.backgroundColor = "blue"
+
+    const descriptionTitle = document.createElement("div") 
+    descriptionTitle.innerHTML = "Add Description:" 
+
+    
+    const newDescription = document.createElement("input")  
+    newDescription.className = ("input_bar2")  
+    newTitle.style.backgroundColor= "red"
+
+
+    newInputCard.appendChild(inputTitle)
+    newInputCard.appendChild(newTitle)
+    newInputCard.appendChild(descriptionTitle)
+    newInputCard.appendChild(newDescription)   
+
+    ; 
+    mainBoard.appendChild(newInputCard)
+
+  })
