@@ -1,10 +1,4 @@
-<p align="center">
-<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/n1ckdotexe/seddit">
-<img alt="Website" src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fseddit-online.herokuapp.com%2Fhome">
-<img alt="npm" src="https://img.shields.io/npm/v/npm">
-<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/n1ckdotexe/seddit">
-<img alt="GitHub" src="https://img.shields.io/github/license/n1ckDotEXE/Seddit">
-</p>
+
  
 <p align = "right">
 <img alt="Twitter URL" src="https://img.shields.io/twitter/url?style=social&url=http%3A%2F%2Fseddit-online.heroku.com">
@@ -15,6 +9,14 @@
 <a href="seddit-online.herokuapp.com"><img src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/logo-200x200.png?raw=true"></a>
 </p>
 <p align="center"><b>The Back Page of the Internet</b></p>
+
+<p align="center">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/n1ckdotexe/seddit">
+<img alt="Website" src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fseddit-online.herokuapp.com%2Fhome">
+<img alt="npm" src="https://img.shields.io/npm/v/npm">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/n1ckdotexe/seddit">
+<img alt="GitHub" src="https://img.shields.io/github/license/n1ckDotEXE/Seddit">
+</p>
 
 <p align=center><b>Seddit is a satirical social news aggregation, web content rating, and discussion website created to mimic the functionalities of the popular website Reddit.</b></p>
 
