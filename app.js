@@ -9,7 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const userRouter = require('./routes/users');
-const subsedditRouter = require('./routes/subseddits');
+const commentsRouter = require('./routes/comments');
 const postRouter = require('./routes/posts');
 
 app.set('view engine', 'ejs');
@@ -93,20 +93,22 @@ app.get('/homeLoggedIn', (req, res) => {
     })
    
     res.render('index2', {
+      
       username: req.session.user.first_name,
       profilePic:`images/${req.session.user.profile_pic}.png`,
 
       display:'false', 
       notshown: 'notshown',
       posts: posts 
-    })
+    } 
+    )
   })
 })
 
 
 
 app.use('/users', userRouter);
-app.use('/subseddits', subsedditRouter);
+app.use('/comments', commentsRouter);
 app.use('/posts', postRouter); 
 
 app.get('/dashboard', checkAuthentication, (req, res) => {
