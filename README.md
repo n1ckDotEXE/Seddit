@@ -1,12 +1,10 @@
-
- 
 <p align = "right">
 <img alt="Twitter URL" src="https://img.shields.io/twitter/url?style=social&url=http%3A%2F%2Fseddit-online.heroku.com">
 <img alt="GitHub watchers" src="https://img.shields.io/github/watchers/n1ckdotexe/seddit?style=social">
 </p>
 
 <p align="center">
-<a href="seddit-online.herokuapp.com"><img src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/logo-200x200.png?raw=true"></a>
+<a href="https://seddit-online.herokuapp.com"><img src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/logo-200x200.png?raw=true"></a>
 </p>
 <p align="center"><b>The Back Page of the Internet</b></p>
 
