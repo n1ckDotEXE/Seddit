@@ -9,7 +9,17 @@ function checkAuthentication(req, res, next) {
     res.send('you are not logged in')
     // res.redirect('/users');
   }
-}
+} 
+
+
+router.use(checkAuthentication)
+router.use(express.static("./public")) 
+
+router.get('/create', (req, res) => {
+  res.render('index2.ejs', { 
+  
+  });
+}); 
 
 
 // retrieve all posts
@@ -30,25 +40,30 @@ router.post('/increment/:id', (req,res)=>{
 })
 
 
-router.post('/',checkAuthentication, (req,res,) =>{ 
-  const title = req.body.input_bar
-  const rightVotes = 0
-  const leftVotes = 0
-  const data = req.body.input_bar2
-  const numbOfComments = 0
-  const author =req.session.user
+router.post('/create',(req,res,) =>{ 
+
+  
+
+  let title = req.body.input_bar
+  let rightVotes = 0
+  let leftVotes = 0
+  let content = req.body.input_bar2
+  let numbOfComments = 0
+  let author =req.session.user.id
 
   
     db.Posts.create({   
       post_title: title, 
-      post_rightVotes: rightVotes,  
+      post_rightvotes: rightVotes,  
       post_leftvotes: leftVotes,
-      post_data: data, 
+      post_data: content, 
       posts_numberOfComments: numbOfComments,  
       author_id: author
-    }).then((user) => { 
+    }).then((user) => {  
+      console.log(req.body) 
+      console.log(req.user)
       req.session.user = user;
-      res.redirect('../home');
+      res.redirect('../homeLoggedIn');
     }); 
   });
 

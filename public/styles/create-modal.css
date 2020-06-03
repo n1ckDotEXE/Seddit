@@ -77,5 +77,8 @@
   flex-direction: column; 
   justify-content: flex-start;
   align-items: flex-end;
-  margin-left: 100px;
+  margin-left: 100px;  
+  position: absolute;
+  right: 30px; 
+  top: 10px;
 }

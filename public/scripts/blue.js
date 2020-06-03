@@ -1,57 +1,19 @@
-
-
-const createModalForm = document.getElementById("create-modal-form") 
-const createModalLink = document.getElementsByClassName("nav-links")[0]
-const span = document.getElementsByClassName("close")[0]  
-
-
-
-
-createModalLink.onclick = function(){ 
-    createModalForm.style.display = "block"
-} 
-
-span.onclick = function(){ 
-    createModalForm.style.display = "none"
-} 
-
-
-const loginModalForm = document.getElementById("login-modal-form") 
-const loginModalLink = document.getElementsByClassName("nav-links")[1] 
-const loginspan = document.getElementsByClassName("close")[1] 
-
-loginModalLink.onclick = function(){ 
-    loginModalForm.style.display = "block" 
-
-
-} 
-
-loginspan.onclick = function(){ 
-    loginModalForm.style.display = "none"
-} 
-
-const createModalFormSubmitButton = document.getElementById("create-modal-form-submit-button")
-
-
-
-
-
-  const mainBoard = document.getElementsByClassName("main-board")[0]
+const mainBoard = document.getElementsByClassName("main-board")[0]
   const myAddButton = document.getElementsByClassName("my-add-button")[0] 
 
   myAddButton.addEventListener("click", () => {  
     const newInputCard = document.createElement("div")
-    newInputCard.className = ("shadow newpostinput") 
+    newInputCard.className = ("shadow post-preview scroll") 
 
     const inputTitle = document.createElement("div")
      
     inputTitle.innerHTML = "Topic Title:" 
-    inputTitle.style.marginTop = "10px"
 
 
     const newTitle = document.createElement("input") 
-    newTitle.className = ("input_bar2")  
-    newTitle.type = "text"
+    newTitle.className = "input_bar" 
+    newTitle.setAttribute("type","text")
+    newTitle.setAttribute("name","input_bar")
 
     const descriptionTitle = document.createElement("div") 
     descriptionTitle.innerHTML = "Add Description:" 
@@ -59,7 +21,8 @@ const createModalFormSubmitButton = document.getElementById("create-modal-form-s
     
     const newDescription = document.createElement("input")  
     newDescription.className = "input_bar2 scroll"
-    newDescription.type = "text"
+    newDescription.setAttribute("type","text")   
+    newDescription.setAttribute("name","input_bar2") 
     // newTitle.style.backgroundColor= "red"
 
     const submitButton = document.createElement("button") 
@@ -68,8 +31,9 @@ const createModalFormSubmitButton = document.getElementById("create-modal-form-s
    submitButton.innerHTML = "POST" 
 
   const form = document.createElement("form")
-  form.method="POST" 
-  form.action="/posts/create"
+  form.setAttribute("method","POST")  
+  form.setAttribute("action","posts/create")
+  // form.action="/posts/create"
 
     form.appendChild(inputTitle)
     form.appendChild(newTitle)
@@ -77,7 +41,7 @@ const createModalFormSubmitButton = document.getElementById("create-modal-form-s
     form.appendChild(newDescription) 
     form.appendChild(submitButton)   
     newInputCard.appendChild(form)
-   
+    newInputCard.style.height="auto" 
    
 
     
@@ -87,14 +51,23 @@ const createModalFormSubmitButton = document.getElementById("create-modal-form-s
   const leftlikeButtons = document.getElementsByClassName("left-like")
   console.log(leftlikeButtons.length)
   
-
-
-
-
-  const posty = document.getElementsByClassName("post-preview") 
-  console.log(posty)
+  var i = 0; 
   
-  Array.prototype.forEach.call(posty ,(post) => {
+function calculate(){ 
+  
+  leftlikeButtons.map(() => { 
+   for (y=0; y<leftlikeButtons.length; y++){ 
+    let button = document.getElementsByClassName('left-like')[y]
+    console.log(button)
+    
+    button.innerHTML = `${i}`;
+     i++;
+  }
+   } )} 
+
+   const posty = document.getElementsByClassName("post-preview") 
+
+   Array.prototype.forEach.call(posty ,(post) => {
     post.addEventListener("click",(e)=> { 
       JSON.stringify(post) 
       mainBoard.innerHTML =""
@@ -114,7 +87,7 @@ const createModalFormSubmitButton = document.getElementById("create-modal-form-s
     addCommentButton.setAttribute("name","addCommentButton")
   addCommentButton.addEventListener("click", (e)=>{ 
     e.preventDefault()
-    axios.post("/comments", {comment_text: commentInput.value}).then(res => { 
+    axios.post("/comments", {comment_text: this.commentInput.value}).then(res => { 
      
       const commentdiv = document.createElement("div") 
       commentdiv.style.width ="150px" 
@@ -165,14 +138,3 @@ const createModalFormSubmitButton = document.getElementById("create-modal-form-s
 
 
   } )})
-
-  
-  
-
- 
-
-  
-
-
-
-
