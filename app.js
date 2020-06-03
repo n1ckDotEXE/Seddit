@@ -11,20 +11,10 @@ const PORT = process.env.PORT || 3000;
 const userRouter = require('./routes/users');
 const commentsRouter = require('./routes/comments');
 const postRouter = require('./routes/posts');
+const searchRouter = require('./routes/searches');
 
 app.set('view engine', 'ejs');
 app.set('views', 'views'); 
-
-// app.use(cookieParser()); 
-// app.use(session({ 
-//   secret:'secret', 
-//   resave:false, 
-//   saveUninitialized: true, 
-//   cookie: { 
-//     secure:false, 
-//     maxAge: 2592000
-//   }
-// }))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -42,12 +32,10 @@ app.use(
 );
 
 function checkAuthentication(req, res, next) {
-  // console.log(req)
   if (req.session.user) {
     next();
   } else {
     res.send('you are not logged in')
-    // res.redirect('/users');
   }
 }
 
@@ -93,10 +81,8 @@ app.get('/homeLoggedIn', (req, res) => {
     })
    
     res.render('index2', {
-      
       username: req.session.user.first_name,
       profilePic:`images/${req.session.user.profile_pic}.png`,
-
       display:'false', 
       notshown: 'notshown',
       posts: posts 
@@ -105,11 +91,10 @@ app.get('/homeLoggedIn', (req, res) => {
   })
 })
 
-
-
 app.use('/users', userRouter);
 app.use('/comments', commentsRouter);
-app.use('/posts', postRouter); 
+app.use('/posts', postRouter);
+app.use('/searches', searchRouter);
 
 app.get('/dashboard', checkAuthentication, (req, res) => {
   res.send('This is the Dashboard and you are logged in');
