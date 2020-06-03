@@ -25,6 +25,11 @@
 <a href="https://github.com/n1ckDotEXE"><img width=10% height=10% src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/nn.png?raw=true"></a>
 </p>
 
+## Site Preview:
+<p align="center">
+<img width=100% height=100% src="https://github.com/n1ckDotEXE/Seddit/blob/master/img/readme-animation.gif?raw=true">
+</p>
+
 ## Features List:
  - Create public posts
  - Add comments to discuss posts
